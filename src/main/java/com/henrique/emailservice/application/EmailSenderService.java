@@ -1,5 +1,6 @@
 package com.henrique.emailservice.application;
 
+import com.henrique.emailservice.adapters.EmailSenderGateway;
 import com.henrique.emailservice.core.EmailSenderUseCase;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -14,6 +15,6 @@ public class EmailSenderService implements EmailSenderUseCase {
 
     @Override
     public void sendEmail(String to, String subject, String body) {
-
+        this.emailSenderGateway.sendEmail(to, subject, body);
     }
 }
