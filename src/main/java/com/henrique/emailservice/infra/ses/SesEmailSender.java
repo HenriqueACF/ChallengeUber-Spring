@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class SesEmailSender implements EmailSenderGateway {
 
-    private final AmazonSimpleEmailService amazonSimpleEmailService;
+   private final AmazonSimpleEmailService amazonSimpleEmailService;
 
-    @Autowired
-    public SesEmailSender(AmazonSimpleEmailService amazonSimpleEmailService){
+   @Autowired
+    public SesEmailSender(AmazonSimpleEmailService amazonSimpleEmailService) {
         this.amazonSimpleEmailService = amazonSimpleEmailService;
     }
 
